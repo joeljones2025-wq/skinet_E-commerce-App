@@ -1,0 +1,31 @@
+<div class="w-full">
+    @if (deliveryError(); as error) {
+        <p role="alert">{{error}}</p>
+    }
+    @if (checkoutService.deliveryMethodsError(); as error) {
+        <p role="alert">{{error}}</p>
+    } @else if (checkoutService.deliveryMethods().length === 0) {
+        <p role="status">No shipping options are available.</p>
+    } @else {
+        <mat-radio-group
+            [value]="cartService.SelectedDelivery()"
+            (change)="updateDeliveryMethod($event.value)"
+            [disabled]="savingDelivery()"
+            class="grid grid-cols-2 gap-4">
+        @for (method of checkoutService.deliveryMethods(); track method.id) {
+            <label class="p-3 border border-gray-200 cursor-pointer w-full hover:bg-purple-100">
+                <mat-radio-button 
+                class="w-full h-full" 
+                [value]="method">
+                    <div class="flex flex-col w-full h-full">
+                        <strong>
+                            {{method.shortName}} - {{method.price | currency}}
+                        </strong>
+                        <span class="text-sm">{{method.description}}</span>
+                    </div>
+                </mat-radio-button>
+            </label>
+        }
+        </mat-radio-group>
+    }
+</div>

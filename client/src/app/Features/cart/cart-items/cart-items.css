@@ -1,0 +1,16 @@
+.quantity-button,
+.delete-button {
+  cursor: pointer;
+}
+
+.quantity-button--decrement {
+  color: #dc2626;
+}
+
+.quantity-button--increment {
+  color: #16a34a;
+}
+
+.delete-button {
+  color: #b91c1c;
+}

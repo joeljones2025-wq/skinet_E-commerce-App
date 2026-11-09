@@ -1,0 +1,16 @@
+.icon-display {
+    transform: scale(3);
+}
+
+.empty-state__shop-button {
+    min-width: 104px;
+    height: 32px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #7200f5;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}

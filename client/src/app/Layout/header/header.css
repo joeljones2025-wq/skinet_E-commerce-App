@@ -1,0 +1,178 @@
+.custom-badge .mat-badge-content {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.custom-badge .mat-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 14%);
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  display: block;
+  width: 120px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.main-nav {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  gap: 12px;
+  transform: translateX(-50%);
+}
+
+.main-nav a {
+  color: #111;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-badge {
+  display: flex;
+  align-items: center;
+  margin: 0 4px 0 0;
+  color: #111;
+}
+
+.custom-badge .mat-badge-content {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.custom-badge .mat-icon {
+  width: 26px;
+  height: 26px;
+  font-size: 26px;
+}
+
+.auth-button {
+  min-width: 66px;
+  height: 32px;
+  padding: 0 12px;
+  border-color: #c9c4ce;
+  border-radius: 5px;
+  color: #762be0;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.account-menu-trigger {
+  display: inline-flex;
+  max-width: 220px;
+  align-items: center;
+  gap: 2px;
+  padding: 0 6px 0 10px;
+  color: #762be0;
+}
+
+.account-menu-trigger span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-menu-trigger mat-icon {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    min-height: 60px;
+    padding: 0 10px;
+  }
+
+  .brand img {
+    width: 96px;
+  }
+
+  .main-nav {
+    position: static;
+    gap: 8px;
+    transform: none;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .auth-button {
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  .account-menu-trigger {
+    max-width: 130px;
+    padding: 0 2px 0 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand img {
+    width: 76px;
+  }
+
+  .main-nav {
+    gap: 5px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+
+  .auth-button {
+    padding: 0 5px;
+    font-size: 10px;
+  }
+
+  .account-menu-trigger {
+    max-width: 100px;
+    font-size: 10px;
+  }
+}
+
+.main-nav a.active {
+  color: #7d00fa;
+}

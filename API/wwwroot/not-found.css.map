@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/component/not-found/not-found.css"],
+  "sourcesContent": [".icon-display {\n  transform: scale(3);\n}"],
+  "mappings": ";AAAA,CAAA;AACE,aAAA,MAAA;AACF;",
+  "names": []
+}

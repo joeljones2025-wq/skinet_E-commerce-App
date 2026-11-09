@@ -1,0 +1,58 @@
+<header class="site-header">
+  <div class="header-content">
+    <a class="brand" routerLink="/" aria-label="Snow Sports Gear home">
+      <img src="/images/logo.png" alt="Snow Sports Gear">
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/shop" routerLinkActive="active">Shop</a>
+      <a routerLink="/test-error" routerLinkActive="active">Errors</a>
+      @if (accountService.isAdmin()) {
+        <a routerLink="/admin" routerLinkActive="active">Admin</a>
+      }
+    </nav>
+
+    <div class="header-actions">
+      <a routerLink="/cart" routerLinkActive="active"
+        matBadge="{{cartService.itemcount()}}" 
+        matBadgeSize="small" class="custom-badge" [attr.aria-label]="'Shopping cart, ' + cartService.itemcount() + ' items'">
+        <mat-icon>shopping_cart</mat-icon>
+      </a>
+
+      @if (accountService.currentUser(); as user) {
+        <button
+          mat-button
+          class="account-menu-trigger"
+          type="button"
+          [matMenuTriggerFor]="accountMenu"
+          aria-label="Account menu">
+          <span>{{ user.email }}</span>
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #accountMenu="matMenu">
+          <button mat-menu-item routerLink="/cart">
+            <mat-icon>shopping_cart</mat-icon>
+            <span>My cart</span>
+          </button>
+          <button mat-menu-item routerLink="/orders">
+            <mat-icon>history</mat-icon>
+            <span>My orders</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      } @else {
+        <button routerLink="/account/login" mat-stroked-button class="auth-button" type="button">Login</button>
+        <button routerLink="/account/register" mat-stroked-button class="auth-button" type="button">Register</button>
+      }
+    </div>
+  </div>
+</header> 
+
+@if (busyService.loading()) {
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+}

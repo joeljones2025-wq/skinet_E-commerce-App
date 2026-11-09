@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/component/empty-state/empty-state.css"],
+  "sourcesContent": [".icon-display {\n    transform: scale(3);\n}\n\n.empty-state__shop-button {\n    min-width: 104px;\n    height: 32px;\n    padding: 0 12px;\n    border: 0;\n    border-radius: 5px;\n    background-color: #7200f5;\n    color: #fff;\n    font-size: 12px;\n    font-weight: 600;\n    cursor: pointer;\n}"],
+  "mappings": ";AAAA,CAAA;AACI,aAAA,MAAA;AACJ;AAEA,CAAA;AACI,aAAA;AACA,UAAA;AACA,WAAA,EAAA;AACA,UAAA;AACA,iBAAA;AACA,oBAAA;AACA,SAAA;AACA,aAAA;AACA,eAAA;AACA,UAAA;AACJ;",
+  "names": []
+}

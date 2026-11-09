@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/Features/shop/product-item/product-item.css"],
+  "sourcesContent": [":host {\n  display: block;\n}\n\nmat-card {\n  height: 100%;\n}\n\nimg {\n  display: block;\n  width: 100%;\n  aspect-ratio: 1;\n  object-fit: cover;\n}\n\n.product-card {\n  transition: transform 0.2s, box-shadow 0.2s;\n}\n\n.product-card:hover{\n  transform: translateY(-10px);\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n  cursor: pointer;\n}"],
+  "mappings": ";AAAA;AACE,WAAA;AACF;AAEA;AACE,UAAA;AACF;AAEA;AACE,WAAA;AACA,SAAA;AACA,gBAAA;AACA,cAAA;AACF;AAEA,CAAA;AACE,cAAA,UAAA,IAAA,EAAA,WAAA;AACF;AAEA,CAJA,YAIA;AACE,aAAA,WAAA;AACA,cAAA,EAAA,IAAA,IAAA,KAAA,CAAA,EAAA,CAAA,EAAA,CAAA,EAAA;AACA,UAAA;AACF;",
+  "names": []
+}

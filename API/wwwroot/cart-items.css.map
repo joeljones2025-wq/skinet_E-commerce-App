@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/Features/cart/cart-items/cart-items.css"],
+  "sourcesContent": [".quantity-button,\n.delete-button {\n  cursor: pointer;\n}\n\n.quantity-button--decrement {\n  color: #dc2626;\n}\n\n.quantity-button--increment {\n  color: #16a34a;\n}\n\n.delete-button {\n  color: #b91c1c;\n}"],
+  "mappings": ";AAAA,CAAA;;AAEE,UAAA;AACF;AAEA,CAAA;AACE,SAAA;AACF;AAEA,CAAA;AACE,SAAA;AACF;AAEA;AACE,SAAA;AACF;",
+  "names": []
+}
